@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+.calc-wrapper {
+  min-height: 100vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc {
+  background: #111;
+  width: 320px;
+  border-radius: 12px;
+  padding: 15px;
+  border: 3px solid white;
+}
+
+/* Display */
+.display {
+  height: 80px;
+  background: white;
+  color: black;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow-x: auto;
+}
+
+/* Buttons grid */
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  padding: 18px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: white;
+}
+
+.btn:hover {
+  background: #ddd;
+}
+
+.equal {
+  background: #00cec9;
+  color: black;
+  grid-column: span 2;
+}
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+  .calc {
+    width: 90%;
+  }
+
+  .btn {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .display {
+    font-size: 26px;
+  }
+}
+
+/* 💻 Laptop */
+@media (min-width: 768px) {
+  .calc {
+    width: 350px;
+  }
+}
